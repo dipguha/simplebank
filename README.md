@@ -1,8 +1,10 @@
 # simplebank Application 
 
-1.  go version from command prompt
-    1. Edit .bash_profile
-    2. source ~/.bash_profile
+1.  Install Go
+    1. go version (go version go1.17.7 darwin/amd64)
+    2. go env GOPATH (/Users/cguha/go)
+    3. Edit .bash_profile, export PATH=$PATH:$(go env GOPATH)/bin
+    4. source ~/.bash_profile
 2.  Install VS Code
     1. Set code . (command shift P, shell command: Install code command in PATH)
     2. go run main.go
@@ -22,6 +24,17 @@
     - migrate -version
     - migrate help
     - migrate create -ext sql -dir db/migration -seq init_schema
-    - 
+6. CRUD library
+    - DATABASE/SQL low level package as part of Go
+    - GORM
+    - SQLX library
+    - SQLC, our prefered method
+        - brew install sqlc
+        - sqlc version (v1.24.0)
+        - brew list. brew uninstall sqlc
+        - brew install kyleconroy/sqlc/sqlc
+        - sqlc init
+    - go mod init github.com/dipguha/simplebank
+    - go mod tidy
 
 
