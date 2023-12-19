@@ -36,5 +36,7 @@
         - sqlc init
     - go mod init github.com/dipguha/simplebank
     - go mod tidy
-
+7. Create account_test.go and main_test.go
+    - Get postgres driver, go get github.com/lib/pq (go: added github.com/lib/pq v1.10.9)
+    - Get testify, go get github.com/stretchr/testify
 
