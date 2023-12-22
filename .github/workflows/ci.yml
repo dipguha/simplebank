@@ -36,14 +36,14 @@ jobs:
       - name: Step 2, checkout code     
         uses: actions/checkout@v3
 
-      - name: Step x, Install golang-migrate
+      - name: Step 3, Install golang-migrate
         run: | 
           curl -L https://github.com/golang-migrate/migrate/releases/download/v4.17.0/migrate.linux-amd64.tar.gz | tar xvz
           sudo mv migrate /usr/bin/migrate
           which migrate
 
-      - name: Step 3, run migration
+      - name: Step 4, run migration
         run:  make migrateup 
  
-      - name: Step 3, Test
+      - name: Step 5, Test
         run: make test
